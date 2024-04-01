@@ -10,9 +10,9 @@ from include.posTagGeneration.importURL import ImportURL
 from include.posTagGeneration.importQuran import ImportQuran
 
 def POS(textIn):
-    modelCorpus = '/media/ahmed/College/grad project/Models/POS Models/POS/model/corpus/'
-    modelSources = '/media/ahmed/College/grad project/Models/POS Models/POS/model/sources/'
-    modelResults = '/media/ahmed/College/grad project/Models/POS Models/POS/model/results/'
+    modelCorpus = '/media/ahmed/College/grad project/Models/POS Models/Voice-Assistant/model/corpus/'
+    modelSources = '/media/ahmed/College/grad project/Models/POS Models/Voice-Assistant/model/sources/'
+    modelResults = '/media/ahmed/College/grad project/Models/POS Models/Voice-Assistant/model/results/'
     
 
     input = textIn

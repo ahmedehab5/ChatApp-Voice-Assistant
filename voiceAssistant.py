@@ -43,7 +43,7 @@ def getClassificationInput(entities, tags, text):
 
 
 if __name__ == '__main__':
-    text = 'ابدأ الاتصال بمجدي حسن'
+    text = 'ارسل رسالة صوتية الى محمد علي'
     tokStems , stemsTag = POS(text)
     print('tokStems: ')
     print(tokStems)
@@ -74,3 +74,18 @@ if __name__ == '__main__':
     print('order: ' + order)
     print('command: ' + command)
 
+
+def voiceAssistantOutput(text):
+    print('text: ' + text)
+    tokStems , stemsTag = POS(text)
+    NERInput = getNERInput(tokStems, stemsTag)
+    entities, tags = NER(NERInput)
+    if len(entities) > 0:
+        name, order = getClassificationInput(entities, tags, NERInput)
+    
+    else:
+        name = ''
+        order = NERInput
+    command = classify(order)
+
+    return name, command
