@@ -76,7 +76,6 @@ if __name__ == '__main__':
 
 
 def voiceAssistantOutput(text):
-    print('text: ' + text)
     tokStems , stemsTag = POS(text)
     NERInput = getNERInput(tokStems, stemsTag)
     entities, tags = NER(NERInput)
